@@ -6,5 +6,5 @@ sources:
     database: demo
     schema: demo_schema
     tables:
-      - name: BIKE_AWS
-      - name: WEATHER
+      - name: bike_aws
+      - name: weather

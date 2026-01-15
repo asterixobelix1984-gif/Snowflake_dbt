@@ -1,5 +1,4 @@
-SELECT
+select
 *
-FROM {{ source('demo', ' BIKE_AWS') }}
+from {{ source('demo', 'bike_aws') }}
 
-LIMIT 10;
