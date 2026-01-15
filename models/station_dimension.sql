@@ -9,7 +9,7 @@ start_station_name,
 start_lat,
 start_lng
 FROM 
-{{ source('demo', 'bike_aws') }}
+{{ref('stg_bike')}}
 
 )
 SELECT * FROM bike

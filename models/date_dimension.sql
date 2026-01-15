@@ -8,7 +8,7 @@ SELECT
     {{day_type('STARTED_AR')}} DAY_TYPE,
     {{get_season('STARTED_AT')}} AS STATION_OF_YEAR,
     {{function1('STARTED_AT')}} AS PAST_FUTURE
-from {{ source('demo', 'bike_aws') }}
+from {{ref('stg_bike')}}
 
 )
 
