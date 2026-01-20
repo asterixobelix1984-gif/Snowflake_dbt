@@ -24,6 +24,7 @@ SELECT
     output_address,
     total_sent,
     tx_count,
-    price 
-FROM Whales
-CROSS JOIN LATEST_PRICE
+    --(p.price * w.total_sent) as total_sent_usd
+    {{convert_to_usd('w.total_sent')}} as total_sent_usd
+FROM Whales w
+--CROSS JOIN LATEST_PRICE p
