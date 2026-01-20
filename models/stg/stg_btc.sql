@@ -1,8 +1,8 @@
 
 
 
-{{config(materialized='incremental',incremental_strategy='merge', unique_key='HASH_KEY')}}
-
+--{{config(materialized='incremental',incremental_strategy='merge', unique_key='HASH_KEY')}}
+{{config(materialized='incremental',incremental_strategy='append', unique_key='HASH_KEY')}}
 
 SELECT 
 * 
